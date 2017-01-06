@@ -11,14 +11,14 @@ function windowResized() {
 
 // paint on the canvas
 function draw() {
-	// If clicking, fill with random color
+	// If clicking, hide cursor
 	if (mouseIsPressed)
 		noCursor()
 	else
 		cursor(HAND)
 }
 
-// initates the print function on tap, falls back to click
+// initates the print function on tap or click
 function touchMoved() {
 	paintRandomShape()
 	return false
@@ -26,10 +26,12 @@ function touchMoved() {
 
 // generates random shape
 function paintRandomShape() {
+	// initate randomness
 	var randColor = [Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1, Math.floor(Math.random() * 255) + 1],
 		randShape = Math.floor(Math.random() *   2) + 1,
 		randSize  = Math.floor(Math.random() *  80) + 1
 
+	// fill the shape with random color
 	fill(randColor[0], randColor[1], randColor[2])
 
 	// draw 80px or smaller circle or square at mouse coords
