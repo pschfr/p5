@@ -1,0 +1,7 @@
+{
+	"globals": {
+		"name": "p5",
+		"introduction": "My experiments with p5.js",
+		"githubURL": "https://github.com/pschfr/p5"
+	}
+}
