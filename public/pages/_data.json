@@ -1,0 +1,10 @@
+{
+	"splatter": {
+		"title": "Splatter",
+		"script": "splatter.js"
+	},
+	"3D": {
+		"title": "3D",
+		"script": "3D.js"
+	}
+}

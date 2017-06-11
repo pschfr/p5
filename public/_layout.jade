@@ -7,7 +7,7 @@ html(lang="en")
 		meta(name="description" content="#{introduction}")
 		title #{name} &mdash; #{introduction}
 		link(rel="stylesheet" href="/css/styles.css")
-	body
-		!= yield
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js")
-		script(src="/js/scripts.js")
+		if title != undefined
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js")
+body(id=(title ? title : undefined))
+	!= yield

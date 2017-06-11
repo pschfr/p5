@@ -1,2 +1,13 @@
+.container
+	.row
+		.col-xs-12
+			h1.page-header #{introduction}
+
+			ul.list-group
+				each page, slug in public.pages._data
+					li.list-group-item
+						a(href="/pages/#{slug}.html") #{page.title}
+
 footer
-	p tap to draw!
+	p
+		a(href="https://p5js.org/" target="_blank") p5js.org
